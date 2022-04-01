@@ -1,0 +1,19 @@
+.numberItem {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+
+  width: 72px;
+  height: 48px;
+
+  background: #FFFFFF;
+  border: 1px solid #E2E3E5;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  &__zero {
+    width: 150px;
+  }
+}

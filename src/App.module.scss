@@ -7,7 +7,7 @@
 
 .calculatorWrapper {
   display: inline-block;
-  background: #E5E5E5;
+  background: #FFFFFF;
   padding: 30px;
   display: flex;
   justify-content: space-between;
@@ -15,5 +15,15 @@
   margin: 0 auto;
 }
 
+.calculatorSegments {
+  padding: 30px;
+}
 
+.calculatorPanelWrapper {
+  width: 243px;
+  height: 480px;
 
+  border: 2px dashed #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 6px;
+}

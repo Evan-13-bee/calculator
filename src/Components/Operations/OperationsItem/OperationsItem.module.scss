@@ -1,0 +1,17 @@
+.operationItem {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+
+  width: 52px;
+  height: 48px;
+  left: 80px;
+  top: 182px;
+
+  background: #FFFFFF;
+  border: 1px solid #E2E3E5;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
