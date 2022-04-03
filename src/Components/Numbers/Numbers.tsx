@@ -18,7 +18,7 @@ export const Numbers: FC<NumbersType> = React.memo(function ({...restProps}) {
       <NumberItem number={'2'} />
       <NumberItem number={'3'} />
       <NumberItem number={'0'} zero />
-      <NumberItem number={','} />
+      <NumberItem number={'.'} />
     </div>
   )
 })

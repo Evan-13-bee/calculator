@@ -1,0 +1,81 @@
+.toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1px;
+
+  width: 239px;
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+
+  background: #F3F4F6;
+  border-radius: 6px;
+}
+
+.icon {
+  &__code {
+    background: url('../../../public/Vector.svg');
+    background-repeat: no-repeat;
+    background-size: 13px;
+    height: 9.67px;
+    width: 13.67px;
+  }
+
+  &__eye {
+    color: #5D5FEF;
+    height: 12px;
+  }
+
+  &__constructor {
+    width: 133px;
+  }
+
+  &__runtime {
+    width: 108px;
+  }
+}
+
+.label {
+  margin-left: 4px;
+}
+
+.dragMode {
+  &__active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+
+    height: 36px;
+
+    background: #FFFFFF;
+    border: 1px solid #E2E3E5;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+  }
+
+  &__disabled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    height: 36px;
+
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+  }
+}

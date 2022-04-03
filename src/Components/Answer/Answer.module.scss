@@ -15,14 +15,35 @@
   &__wrapper {
     width: 240px;
     height: 60px;
-    
+
     background: #FFFFFF;
-    
+
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+  }
+
+  &__input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: right;
+    color: #111827;
+    border: none;
+    padding: 0 10px 0 10px;
+    
+    width: 206px;
+    height: 52px;
+    
+    background: #F3F4F6;
+    border-radius: 6px;
+    &:focus{
+      outline: none;
+  }
   }
 }

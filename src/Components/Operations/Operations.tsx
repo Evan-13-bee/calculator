@@ -4,7 +4,8 @@ import { OperationsItem } from "./OperationsItem/OperationsItem";
 
 type DefaultDivPropsType = DetailedHTMLProps<HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement>
 type OperationsType = DefaultDivPropsType
-export const Operations: FC<OperationsType> = React.memo(function ({ ...restProps }) {
+export const Operations: FC<OperationsType> = React.memo(function ({...restProps }) {
+  
 
   return (
     <div className={s.operationsWrapper} {...restProps}>

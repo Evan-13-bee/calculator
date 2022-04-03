@@ -1,6 +1,6 @@
 import React from "react";
 import { FC } from "react";
-import { IUser } from "../types/types";
+import { IUser } from "../../types/types";
 
 
 interface UserListProps {

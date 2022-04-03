@@ -1,4 +1,4 @@
-import { UserReducerActionsType } from "../Actions/UserAC"
+import { UserReducerActionsType } from "./UserAC"
 
 export type InitialStateType = typeof initialState
 

@@ -1,12 +1,12 @@
 import React, { ChangeEventHandler, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Main, Variant } from './Components/Main';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateUserName, updateUserNameTC } from './Actions/UserAC';
+import { updateUserName, updateUserNameTC } from './Reducers/UserAC';
 import { AppRootStateType } from './Store/store';
 import { InitialStateType } from './Reducers/User';
-import { UserList } from './Components/UserList';
+import { UserList } from './Components/UsersList/UserList';
+import { Main, Variant } from './Components/Main/Main';
 
 const App = React.memo(function () {
   console.log('app');
