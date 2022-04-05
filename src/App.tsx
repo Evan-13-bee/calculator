@@ -1,10 +1,7 @@
 import React, { ChangeEventHandler, DragEvent, DragEventHandler, useState } from 'react';
 import logo from './logo.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateUserName, updateUserNameTC } from './Reducers/UserAC';
 import { AppRootStateType } from './Store/store';
-import { InitialStateType } from './Reducers/User';
-import { UserList } from './Components/UsersList/UserList';
 import s from './App.module.scss';
 import { CalculatorDragWrapper } from './Components/CalculatorDragWrapper/CalculatorDragWrapper';
 import { Answer } from './Components/Answer/Answer';
@@ -62,10 +59,6 @@ const App = React.memo(function () {
     },
   ])
   const [secondCellElements, setSecondCellElements] = useState<Array<arrayElemetType>>([])
-
-  function changeNum(e: string) {
-    dispatch(updateUserNameTC(e))
-  }
 
   function disableRightColumn(board: arrayElemetType[]) {
     if(board === secondCellElements) return false

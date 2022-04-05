@@ -13,10 +13,9 @@ export const Answer: FC<Answer> = React.memo(function ({ ...restProps }) {
   const clearAnswer = () => {
     dispatch(clearAnswerValue())
   }
-  console.log(answer.current);
   
   useEffect(() => {
-    if (Number(answer.current) == Infinity || (isNaN(Number(answer.current)) && answer.current !== 'Не определено')) {
+    if (Number(answer.current) == Infinity || (String(answer.current) === 'NaN' && answer.current !== 'Не определено')) {
       dispatch(updateAnswerValue('Не определено'))
     }
   })

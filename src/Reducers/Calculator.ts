@@ -33,15 +33,18 @@ function checkLastSymbol(value: string) {
 
 export const CalculatorReducer = (state: InitialCalculatorStateType = initialState, action: CalculatorReducerActionsType) => {
   switch (action.type) {
-    case 'UPDATE-ANSWER':
+    case 'UPDATE-ANSWER': {
       let checkCurrentNullValue = (state.current == '0' && action.value != '.') ? action.value : state.current + action.value;
       let checkStackNullValue = (state.stack == '0' && action.value != '.') ? action.value : state.stack + action.value;
       if (!state.stack && !isFinite(+action.value)) { return state }
-      if (Number(state.stack) == Infinity || (isNaN(Number(state.stack)) && state.stack !== 'Не определено')) {
-        return { ...state, stack: 'Не определено', current: 'Не определено' }
+      if (Number(state.stack) == Infinity || (String(state.stack) === 'NaN' && state.stack !== 'Не определено')) {
+        return {
+          ...state, stack: 'Не определено', current: 'Не определено'
+        }
       }
       if (checkLastSymbol(state.stack) && checkLastSymbol(action.value)) return state
       else return { ...state, stack: checkStackNullValue, current: checkCurrentNullValue }
+    }
     case 'CLEAR-ANSWER':
       return { ...state, stack: '0', current: '0' }
     case 'UPDATE-CURRENT':
@@ -51,6 +54,12 @@ export const CalculatorReducer = (state: InitialCalculatorStateType = initialSta
     case 'CALCULATE-ANSWER':
       let answer = Number(eval(`${state.stack}`).toFixed(2))
       if (!state.stack && !isFinite(+action.value) && Number(state.stack) == 0) { return state }
+
+      if (Number(state.stack) == Infinity || (String(answer) === 'NaN' && state.stack !== 'Не определено')) {
+        return {
+          ...state, stack: 'Не определено', current: 'Не определено'
+        }
+      }
       return { ...state, stack: answer, current: answer }
     case 'CHANGE-MODE':
       return { ...state, mode: action.value }
